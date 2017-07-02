@@ -1,19 +1,15 @@
 # Passphrase
 
-**TODO: Add description**
+Passphrase provides a simple utility for generating secure
+passphrases that use dictionary spelling of common words
+six letters or less. 
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `passphrase` to your list of dependencies in `mix.exs`:
+Add this to your `mix.exs` file:
 
 ```elixir
 def deps do
   [{:passphrase, "~> 0.1.0"}]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/passphrase](https://hexdocs.pm/passphrase).
-

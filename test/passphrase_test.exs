@@ -5,6 +5,6 @@ defmodule PassphraseTest do
   test "the truth" do
     p = Passphrase.new()
     len = String.length(p)
-    assert len > 9 && len < 35
+    assert len > 9 && len < 29
   end
 end

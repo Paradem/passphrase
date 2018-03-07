@@ -13,3 +13,11 @@ def deps do
   [{:passphrase, "~> 0.1.0"}]
 end
 ```
+
+## Generate a Passphrase Interactively
+
+1. [Install the Elixir programming language.][ex]
+2. In a shell run `iex -S mix`.
+3. Enter `Passphrase.new()`.
+
+[ex]: https://elixir-lang.org/install.html

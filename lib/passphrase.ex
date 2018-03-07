@@ -8519,8 +8519,8 @@ defmodule Passphrase do
   @doc """
   Generate a new five word long passphrase.
   """
-  def new() do
-    Enum.reduce(1..5, [], fn _, phrase ->
+  def new(length \\ 5) do
+    Enum.reduce(1..length, [], fn _, phrase ->
       [random_word() | phrase]
     end) |> Enum.join(" ")
   end

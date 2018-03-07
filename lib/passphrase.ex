@@ -8513,8 +8513,8 @@ defmodule Passphrase do
     "zoo",
     "zoom",
     "zooms",
-    "zoos",
-]
+    "zoos"
+  ]
 
   @doc """
   Generate a new five word long passphrase.
@@ -8522,8 +8522,10 @@ defmodule Passphrase do
   def new(length \\ 5) do
     Enum.reduce(1..length, [], fn _, phrase ->
       [random_word() | phrase]
-    end) |> Enum.join(" ")
+    end)
+    |> Enum.join(" ")
   end
+
   defp random_word() do
     i = :rand.uniform(8509) - 1
     Enum.at(@words, i)

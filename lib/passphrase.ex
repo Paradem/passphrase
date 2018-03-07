@@ -3,6 +3,9 @@ defmodule Passphrase do
   Passphrase provides a simple utility for generating secure
   passphrases that use dictionary spelling of common words
   that are all unique in the first four letters.
+  This uses Bitcoin's BIP39 wordlist:
+
+  https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
   """
 
   @words [
@@ -2057,7 +2060,7 @@ defmodule Passphrase do
   ]
 
   @doc """
-  Generate a new passphrase with an optional length.
+  Generate a new passphrase with an optional word length.
   """
   def new(length \\ 5) do
     Enum.reduce(1..length, [], fn _, phrase ->

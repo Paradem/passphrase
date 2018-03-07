@@ -8525,7 +8525,7 @@ defmodule Passphrase do
     end) |> Enum.join(" ")
   end
   defp random_word() do
-    i = :crypto.rand_uniform(0, 8508)
+    i = :rand.uniform(8509) - 1
     Enum.at(@words, i)
   end
 end

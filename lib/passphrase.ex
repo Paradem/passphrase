@@ -2060,13 +2060,13 @@ defmodule Passphrase do
   ]
 
   @doc """
-  Generate a new passphrase with an optional length (number of words).
+  Generate a new passphrase with an optional length (number of words) and join string.
   """
-  def new(length \\ 5) do
+  def new(length \\ 5, separator \\ " ") do
     Enum.reduce(1..length, [], fn _, phrase ->
       [random_word() | phrase]
     end)
-    |> Enum.join(" ")
+    |> Enum.join(separator)
   end
 
   defp random_word() do
